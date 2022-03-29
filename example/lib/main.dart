@@ -33,11 +33,11 @@ class _WiredashExampleAppState extends State<WiredashExampleApp> {
     /// own.
     /// Read more about translations support in the package's README.
     return Wiredash(
-      projectId: "Project ID from console.wiredash.io",
-      secret: "API Key from console.wiredash.io",
+      projectId: "example-q3twgds",
+      secret: "RMV3ZmY97_e8YUWLF8gsrxOayIj8BalQ",
       options: WiredashOptionsData(
         /// Change the locale of the Wiredash UI
-        locale: Locale('en'),
+        locale: Locale('uz'),
 
         /// Uncomment below to disable the screenshot step
         // screenshotStep: false,
@@ -63,7 +63,7 @@ class _WiredashExampleAppState extends State<WiredashExampleApp> {
           ..userEmail = 'dash@wiredash.io'
           ..custom['isPremium'] = false
           ..custom['nested'] = {'wire': 'dash'},
-        askForUserEmail: true,
+        askForUserEmail: false,
         labels: [
           Label(
             id: 'lbl-r65egsdf',

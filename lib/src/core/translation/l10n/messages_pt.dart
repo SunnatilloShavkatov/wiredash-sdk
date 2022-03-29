@@ -2,106 +2,206 @@ import 'package:wiredash/wiredash.dart';
 
 class WiredashLocalizedTranslations extends WiredashTranslations {
   const WiredashLocalizedTranslations() : super();
+
   @override
   String get captureSaveScreenshot => "Salvar captura de tela";
+
   @override
   String get captureSkip => "Pular captura de tela";
+
   @override
   String get captureSpotlightNavigateMsg =>
       "Vá para a tela que você deseja capturar ";
+
   @override
   String get captureSpotlightNavigateTitle => "ir";
+
   @override
   String get captureSpotlightScreenCapturedMsg =>
       "Captura de tela salva! Fique à vontade para destacar as áreas afetadas na imagem.";
+
   @override
   String get captureSpotlightScreenCapturedTitle => "desenhar";
+
   @override
   String get captureTakeScreenshot => "Tirar captura de tela";
+
   @override
   String get feedbackBack => "Voltar";
+
   @override
   String get feedbackCancel => "Cancelar";
+
   @override
   String get feedbackModeBugMsg =>
       "Conte para nós, assim podemos encaminhar o problema para nosso controle de erros.";
+
   @override
   String get feedbackModeBugTitle => "Reportar um problema";
+
   @override
   String get feedbackModeImprovementMsg =>
       "Você tem uma ideia que faria nosso app melhor? Nós adoraríamos ouvir!";
+
   @override
   String get feedbackModeImprovementTitle => "Sugerir uma nova funcionalidade";
+
   @override
   String get feedbackModePraiseMsg =>
       "Nos conte o que você mais gosta no nosso app, quem sabe não tornamos isso ainda melhor?";
+
   @override
   String get feedbackModePraiseTitle => "Enviar Aplausos";
+
   @override
   String get feedbackSave => "Salvar";
+
   @override
   String get feedbackSend => "Enviar feedback";
+
   @override
   String get feedbackStateEmailMsg =>
       "Se você deseja ser notificado sobre o andamento do seu feedback, digite seu e-mail abaixo.";
+
   @override
   String get feedbackStateEmailTitle => "Fique por dentro 👇";
+
   @override
   String get feedbackStateFeedbackMsg =>
       "Estamos ouvindo. Por favor, descreva o máximo de informações possíveis para podermos te ajudar.";
+
   @override
   String get feedbackStateIntroMsg =>
       "Mal podemos esperar para saber o que você pensa do nosso app. O que você gostaria de fazer?";
+
   @override
   String get feedbackStateIntroTitle => "Olá 👋";
+
   @override
   String get feedbackStateSuccessCloseMsg => "Obrigado pelo seu feedback!";
+
   @override
   String get feedbackStateSuccessCloseTitle => "Fechar";
+
   @override
   String get feedbackStateSuccessMsg =>
       "Pronto. Muito obrigado por nos ajudar a construir um app cada vez melhor!";
+
   @override
   String get feedbackStateSuccessTitle => "Obrigado ✌️";
+
   @override
   String get inputHintEmail => "Seu e-mail";
+
   @override
   String get inputHintFeedback => "Seu feedback";
+
   @override
   String get validationHintEmail =>
       "Por favor, digite um e-mail válido ou deixe este campo em branco.";
+
   @override
   String get validationHintFeedbackEmpty => "Por favor, escreva seu feedback.";
+
   @override
   String get validationHintFeedbackLength => "Seu feedback é muito longo.";
+
   @override
   String get feedbackStateFeedbackTitle => "Seu feedback ✍️";
+
   @override
   String get firstPenLabel => "A dark brown pen";
+
   @override
   String get secondPenLabel => "An off-white pen";
+
   @override
   String get thirdPenLabel => "A teal highlighter";
+
   @override
   String get fourthPenLabel => "An orange highlighter";
+
   @override
   String get companyLogoLabel => "The Wiredash Logo";
+
   @override
   String get undoButtonLabel => "Undo the last change";
+
   @override
   String get firstPenSelected => "The dark brown pen is selected";
+
   @override
   String get secondPenSelected => "The off-white pen is selected";
+
   @override
   String get thirdPenSelected => "The teal highlighter is selected";
+
   @override
   String get fourthPenSelected => "The orange highlighter is selected";
+
   @override
   String get feedbackStateErrorTitle => "Oops, that didn't work!";
+
   @override
   String get feedbackStateErrorMsg => "Please try to send your feedback again";
+
   @override
   String get feedbackSubmitRetryTitle => "Retry";
+
   @override
   String get feedbackSubmitRetryMsg => "Submit your feedback again";
+
+  @override
+  String get discardFeedback => "Discard Feedback";
+
+  @override
+  String get sendUsYourFeedback => "Fikringizni bizga yuboring";
+
+  @override
+  String get composeMessage => "Compose message";
+
+  @override
+  String get addShortDescriptionOfWhatYouEncountered =>
+      "Add a short description of what you encountered";
+
+  @override
+  String get close => "Close";
+
+  @override
+  String get next => "Next";
+
+  @override
+  String get reallyDiscard => "Really? Discard!";
+
+  @override
+  String get theresAnUnknownErrorWhenITryToChangeMyAvatar =>
+      "There’s an unknown error when I try to change my avatar...";
+
+  @override
+  String get back => "Back";
+
+  @override
+  String get includeScreenshotForMoreContext =>
+      "Include a screenshot for more context?";
+
+  @override
+  String get labels => "Labels";
+
+  @override
+  String get screenshots => "Screenshots";
+
+  @override
+  String get selectingCorrectCategoryBestPersonIssue =>
+      "Selecting the correct category helps forwarding your feedback to the best person to resolve your issue";
+
+  @override
+  String get skip => "Skip";
+
+  @override
+  String get whichLabelRepresentsYourFeedback =>
+      "Which label represents your feedback?";
+
+  @override
+  String get youllAbleNavigateScreenshot =>
+      "You’ll be able to navigate the app and choose when to take a screenshot";
 }

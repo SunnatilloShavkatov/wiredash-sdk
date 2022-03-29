@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wiredash/src/_wiredash_ui.dart';
 import 'package:wiredash/src/feedback/_feedback.dart';
+import 'package:wiredash/wiredash.dart';
 
 class Step2Labels extends StatefulWidget {
   const Step2Labels({Key? key}) : super(key: key);
@@ -13,21 +14,22 @@ class _Step2LabelsState extends State<Step2Labels>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+    final localizations = WiredashLocalizations.of(context)!;
     final feedbackModel = context.feedbackModel;
     final selectedLabels = feedbackModel.selectedLabels;
     return StepPageScaffold(
       indicator: const FeedbackProgressIndicator(
         flowStatus: FeedbackFlowStatus.labels,
       ),
-      title: const Text(
-        'Which label represents your feedback?',
+      title: Text(
+        localizations.whichLabelRepresentsYourFeedback,
       ),
-      shortTitle: const Text('Labels'),
-      description: const Text(
-        'Selecting the correct category helps forwarding your feedback to the best person to resolve your issue',
+      shortTitle: Text(localizations.labels),
+      description: Text(
+        localizations.selectingCorrectCategoryBestPersonIssue,
       ),
-      discardLabel: const Text('Discard Feedback'),
-      discardConfirmLabel: const Text('Really? Discard!'),
+      discardLabel: Text(localizations.discardFeedback),
+      discardConfirmLabel: Text(localizations.reallyDiscard),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,11 +56,11 @@ class _Step2LabelsState extends State<Step2Labels>
               TronButton(
                 color: context.theme.secondaryColor,
                 leadingIcon: Wirecons.arrow_left,
-                label: 'Back',
+                label: localizations.back,
                 onTap: context.feedbackModel.goToPreviousStep,
               ),
               TronButton(
-                label: 'Next',
+                label: localizations.next,
                 trailingIcon: Wirecons.arrow_right,
                 onTap: context.feedbackModel.goToNextStep,
               ),

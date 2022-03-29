@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:wiredash/src/_wiredash_ui.dart';
 import 'package:wiredash/src/feedback/_feedback.dart';
+import 'package:wiredash/wiredash.dart';
 
 class Step6Submit extends StatefulWidget {
   const Step6Submit({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class _Step6SubmitState extends State<Step6Submit> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = WiredashLocalizations.of(context)!;
     return StepPageScaffold(
       indicator: const FeedbackProgressIndicator(
         flowStatus: FeedbackFlowStatus.submit,
@@ -25,8 +27,8 @@ class _Step6SubmitState extends State<Step6Submit> {
         'Please review your data before submission. '
         'You can navigate back to adjust your feedback',
       ),
-      discardLabel: const Text('Discard Feedback'),
-      discardConfirmLabel: const Text('Really? Discard!'),
+      discardLabel: Text(localizations.discardFeedback),
+      discardConfirmLabel: Text(localizations.reallyDiscard),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -37,7 +39,7 @@ class _Step6SubmitState extends State<Step6Submit> {
               TronButton(
                 color: context.theme.secondaryColor,
                 leadingIcon: Wirecons.arrow_left,
-                label: 'Back',
+                label: localizations.back,
                 onTap: context.feedbackModel.goToPreviousStep,
               ),
               TronButton(

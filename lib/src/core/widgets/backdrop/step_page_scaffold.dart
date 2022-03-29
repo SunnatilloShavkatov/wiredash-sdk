@@ -49,10 +49,7 @@ class _StepPageScaffoldState extends State<StepPageScaffold> {
           style: context.theme.headlineTextStyle,
           child: widget.title,
         ),
-        if (widget.description != null)
-          const SizedBox(
-            height: 8,
-          ),
+        if (widget.description != null) const SizedBox(height: 8),
         if (widget.description != null)
           DefaultTextStyle(
             style: context.theme.bodyTextStyle,

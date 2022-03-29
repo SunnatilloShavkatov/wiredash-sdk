@@ -35,17 +35,18 @@ class _Step1FeedbackMessageState extends State<Step1FeedbackMessage>
 
   @override
   Widget build(BuildContext context) {
+    final localizations = WiredashLocalizations.of(context)!;
     return StepPageScaffold(
       indicator: const FeedbackProgressIndicator(
         flowStatus: FeedbackFlowStatus.message,
       ),
-      title: const Text('Send us your feedback'),
-      shortTitle: const Text('Compose message'),
-      description: const Text(
-        'Add a short description of what you encountered',
+      title: Text(localizations.sendUsYourFeedback),
+      shortTitle: Text(localizations.composeMessage),
+      description: Text(
+        localizations.addShortDescriptionOfWhatYouEncountered,
       ),
-      discardLabel: const Text('Discard Feedback'),
-      discardConfirmLabel: const Text('Really? Discard!'),
+      discardLabel: Text(localizations.discardFeedback),
+      discardConfirmLabel: Text(localizations.reallyDiscard),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +77,7 @@ class _Step1FeedbackMessageState extends State<Step1FeedbackMessage>
                     ? context.theme.primaryBackgroundColor.darken(0.015)
                     : context.theme.primaryBackgroundColor.lighten(0.015),
                 hintText:
-                    'There’s an unknown error when I try to change my avatar...',
+                    localizations.theresAnUnknownErrorWhenITryToChangeMyAvatar,
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
                 hintStyle: context.theme.body2TextStyle,
@@ -88,11 +89,11 @@ class _Step1FeedbackMessageState extends State<Step1FeedbackMessage>
             children: [
               TronButton(
                 color: context.theme.secondaryColor,
-                label: 'Close',
+                label: localizations.close,
                 onTap: context.wiredashModel.hide,
               ),
               TronButton(
-                label: 'Next',
+                label: localizations.next,
                 trailingIcon: Wirecons.arrow_right,
                 onTap: context.feedbackModel.feedbackMessage == null
                     ? null

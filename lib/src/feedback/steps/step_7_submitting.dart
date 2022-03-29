@@ -84,9 +84,7 @@ class _Submitting extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 24,
-            ),
+            const SizedBox(height: 24),
             Icon(
               Wirecons.arrow_right,
               size: 48,

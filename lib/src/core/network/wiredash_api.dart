@@ -59,9 +59,11 @@ class WiredashApi {
           contentType: contentType,
         ),
       )
-      ..fields.addAll({
-        'type': mappedType,
-      });
+      ..fields.addAll(
+        {
+          'type': mappedType,
+        },
+      );
 
     final response = await _send(req);
 

@@ -39,20 +39,23 @@ class FakeAppStatusBar extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              Positioned.fill(
-                child: Opacity(
-                  opacity: 0.5,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset(
-                        'assets/images/logo_white.png',
-                        package: 'wiredash',
-                        height: barContentHeight,
-                      ),
-                      const SizedBox(width: 8),
-                      const Text('Wiredash'),
-                    ],
+              Visibility(
+                visible: false,
+                child: Positioned.fill(
+                  child: Opacity(
+                    opacity: 0.5,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Image.asset(
+                          'assets/images/logo_white.png',
+                          package: 'wiredash',
+                          height: barContentHeight,
+                        ),
+                        const SizedBox(width: 8),
+                        const Text('Wiredash'),
+                      ],
+                    ),
                   ),
                 ),
               ),

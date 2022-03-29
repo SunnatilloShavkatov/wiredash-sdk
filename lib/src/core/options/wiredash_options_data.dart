@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:wiredash/src/core/translation/wiredash_localizations.dart';
 import 'package:wiredash/src/core/translation/wiredash_translations.dart';
 

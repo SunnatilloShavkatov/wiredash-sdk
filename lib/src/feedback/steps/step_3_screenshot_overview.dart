@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wiredash/src/_wiredash_ui.dart';
 import 'package:wiredash/src/feedback/_feedback.dart';
+import 'package:wiredash/wiredash.dart';
 
 class Step3ScreenshotOverview extends StatefulWidget {
   const Step3ScreenshotOverview({Key? key}) : super(key: key);
@@ -32,14 +33,15 @@ class Step3NotAttachments extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = WiredashLocalizations.of(context)!;
     return StepPageScaffold(
       indicator: const FeedbackProgressIndicator(
         flowStatus: FeedbackFlowStatus.screenshotsOverview,
       ),
-      title: const Text('Include a screenshot for more context?'),
-      shortTitle: const Text('Screenshots'),
-      description: const Text(
-        'You’ll be able to navigate the app and choose when to take a screenshot',
+      title: Text(localizations.includeScreenshotForMoreContext),
+      shortTitle: Text(localizations.screenshots),
+      description: Text(
+        localizations.youllAbleNavigateScreenshot,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +56,7 @@ class Step3NotAttachments extends StatelessWidget {
                 TronButton(
                   color: context.theme.secondaryColor,
                   leadingIcon: Wirecons.arrow_left,
-                  label: 'Back',
+                  label: localizations.back,
                   onTap: context.feedbackModel.goToPreviousStep,
                 ),
                 Expanded(
@@ -67,7 +69,7 @@ class Step3NotAttachments extends StatelessWidget {
                     children: [
                       TronButton(
                         color: context.theme.secondaryColor,
-                        label: 'Skip',
+                        label: localizations.skip,
                         trailingIcon: Wirecons.chevron_double_right,
                         onTap: context.feedbackModel.goToNextStep,
                       ),

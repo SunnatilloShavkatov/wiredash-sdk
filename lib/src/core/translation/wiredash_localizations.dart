@@ -13,6 +13,7 @@ import 'package:wiredash/src/core/translation/l10n/messages_pl.dart' as pl;
 import 'package:wiredash/src/core/translation/l10n/messages_pt.dart' as pt;
 import 'package:wiredash/src/core/translation/l10n/messages_ru.dart' as ru;
 import 'package:wiredash/src/core/translation/l10n/messages_tr.dart' as tr;
+import 'package:wiredash/src/core/translation/l10n/messages_uz.dart' as uz;
 import 'package:wiredash/src/core/translation/l10n/messages_zh_cn.dart' as zhcn;
 import 'package:wiredash/src/core/translation/wiredash_translations.dart';
 import 'package:wiredash/wiredash.dart';
@@ -56,7 +57,9 @@ class WiredashLocalizations extends StatelessWidget {
   /// List of currently supported locales by Wiredash
   static List<Locale> get supportedLocales {
     return const <Locale>[
+      Locale.fromSubtags(languageCode: 'uz'),
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ru'),
       Locale.fromSubtags(languageCode: 'da'),
       Locale.fromSubtags(languageCode: 'de'),
       Locale.fromSubtags(languageCode: 'pl'),
@@ -67,7 +70,6 @@ class WiredashLocalizations extends StatelessWidget {
       Locale.fromSubtags(languageCode: 'ko'),
       Locale.fromSubtags(languageCode: 'pt'),
       Locale.fromSubtags(languageCode: 'ar'),
-      Locale.fromSubtags(languageCode: 'ru'),
       Locale.fromSubtags(languageCode: 'tr'),
       Locale.fromSubtags(languageCode: 'zh', countryCode: 'cn'),
     ];
@@ -81,10 +83,14 @@ class _InheritedWiredashTranslation extends InheritedWidget {
     required Widget child,
   }) : super(key: key, child: child) {
     final defaultTranslations = <Locale, WiredashTranslations>{
-      const Locale.fromSubtags(languageCode: 'ar'):
-          const ar.WiredashLocalizedTranslations(),
+      const Locale.fromSubtags(languageCode: 'ru'):
+          const ru.WiredashLocalizedTranslations(),
       const Locale.fromSubtags(languageCode: 'en'):
           const en.WiredashLocalizedTranslations(),
+      const Locale.fromSubtags(languageCode: 'uz'):
+          const uz.WiredashLocalizedTranslations(),
+      const Locale.fromSubtags(languageCode: 'ar'):
+          const ar.WiredashLocalizedTranslations(),
       const Locale.fromSubtags(languageCode: 'da'):
           const da.WiredashLocalizedTranslations(),
       const Locale.fromSubtags(languageCode: 'de'):
@@ -103,8 +109,6 @@ class _InheritedWiredashTranslation extends InheritedWidget {
           const pl.WiredashLocalizedTranslations(),
       const Locale.fromSubtags(languageCode: 'pt'):
           const pt.WiredashLocalizedTranslations(),
-      const Locale.fromSubtags(languageCode: 'ru'):
-          const ru.WiredashLocalizedTranslations(),
       const Locale.fromSubtags(languageCode: 'tr'):
           const tr.WiredashLocalizedTranslations(),
       const Locale.fromSubtags(languageCode: 'zh'):
